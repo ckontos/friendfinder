@@ -200,7 +200,6 @@
 			//console.log(userInput);
 			var currentURL = window.location.origin;
 			$.post(currentURL + '/api/friends', userInput, function(data) {
-				//console.log("Post, call-back:");
 				//console.log(data);
 				$("#newFriendName").text(data.name);
 				$("#newFriendImg").attr("src", data.photo);
