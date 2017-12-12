@@ -171,7 +171,7 @@
 		<hr>
 		<a href="/api/friends">API Friends List</a> | <a href="https://github.com/ckontos/friendfinder" target="_blank">GitHub Repo</a>
 	</div>
-	<div id="bestFriendModal" class="modal fade" role="dialog">
+	<div id="newFriendModal" class="modal fade" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -179,8 +179,8 @@
 					<h2 class="modal-title">Best Match</h2>
 				</div>
 				<div class="modal-body">
-					<h2 id="bestFriendName"></h2>
-					<img id="bestFriendImg" src="" width=500px alt="Best Friend">
+					<h2 id="newFriendName"></h2>
+					<img id="newFriendImg" src="" width=500px alt="Best Friend">
 				</div>
 			</div>
 		</div>
@@ -202,9 +202,9 @@
 			$.post(currentURL + '/api/friends', userInput, function(data) {
 				//console.log("Post, call-back:");
 				//console.log(data);
-				$("#bestFriendName").text(data.name);
-				$("#bestFriendImg").attr("src", data.photo);
-				$("#bestFriendModal").modal("show");
+				$("#newFriendName").text(data.name);
+				$("#newFriendImg").attr("src", data.photo);
+				$("#newFriendModal").modal("show");
 			});
 			return false;
 		});

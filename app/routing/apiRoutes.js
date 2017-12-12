@@ -12,10 +12,10 @@ module.exports = function(app) {
         var chosenFriend = req.body;
 
         for (var i = 0; i < chosenFriend.scores.length; i++) {
-            if (chosenFriend.scores[i] == "1 (Strongly Disagree)") {
+            if (chosenFriend.scores[i] === "1 (Strongly Disagree)") {
                 chosenFriend.scores[i] = 1;
             }
-            else if (chosenFriend.scores[i] == "5 (Strongly Agree)") {
+            else if (chosenFriend.scores[i] === "5 (Strongly Agree)") {
                 chosenFriend.scores[i] = 5;
             }
             else {
@@ -38,18 +38,18 @@ module.exports = function(app) {
             scoresArray[i] = totalDifference;
         }
 
-        var bestFriendNum = scoresArray[0];
-        var bestFriendIndex = 0;
+        var newFriendNum = scoresArray[0];
+        var newFriendIndex = 0;
 
         for (var i = 1; i < scoresArray.length; i++) {
-            if (scoresArray[i] < bestFriendNum) {
-                bestFriendNum = scoresArray[i];
-                bestFriendIndex = i;
+            if (scoresArray[i] < newFriendNum) {
+                newFriendNum = scoresArray[i];
+                newFriendIndex = i;
             }
         }
 
         friendData.push(chosenFriend);
 
-        res.json(friendData[bestFriendIndex]);
+        res.json(friendData[newFriendIndex]);
     });
 };
