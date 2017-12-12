@@ -30,7 +30,7 @@
 					<label for="question01">I like visiting new places.</label>
 					<br>
 					<div class="col-md-4">
-						<select class="form-control" id="question01" name="scores[0]">
+						<select class="form-control" id="question1" name="scores[0]">
 						<option>1 (Strongly Disagree)</option>
 						<option>2</option>
 						<option>3</option>
@@ -44,7 +44,7 @@
 					<label for="question02">I get along great with everyone.</label>
 					<br>
 					<div class="col-md-4">
-						<select class="form-control" id="question02" name="scores[1]">
+						<select class="form-control" id="question2" name="scores[1]">
 						<option>1 (Strongly Disagree)</option>
 						<option>2</option>
 						<option>3</option>
@@ -58,7 +58,7 @@
 					<label for="question03">I like sports!</label>
 					<br>
 					<div class="col-md-4">
-						<select class="form-control" id="question03" name="scores[2]">
+						<select class="form-control" id="question3" name="scores[2]">
 						<option>1 (Strongly Disagree)</option>
 						<option>2</option>
 						<option>3</option>
@@ -72,7 +72,7 @@
 					<label for="question04">I like working on challenging problems.</label>
 					<br>
 					<div class="col-md-4">
-						<select class="form-control" id="question04" name="scores[3]">
+						<select class="form-control" id="question4" name="scores[3]">
 						<option>1 (Strongly Disagree)</option>
 						<option>2</option>
 						<option>3</option>
@@ -86,7 +86,7 @@
 					<label for="question05">Dogs are better than humans, and we don't deserve them.</label>
 					<br>
 					<div class="col-md-4">
-						<select class="form-control" id="question05" name="scores[4]">
+						<select class="form-control" id="question5" name="scores[4]">
 						<option>1 (Strongly Disagree)</option>
 						<option>2</option>
 						<option>3</option>
@@ -100,7 +100,7 @@
 					<label for="question06">Everyone's opinion should be valued.</label>
 					<br>
 					<div class="col-md-4">
-						<select class="form-control" id="question06" name="scores[5]">
+						<select class="form-control" id="question6" name="scores[5]">
 						<option>1 (Strongly Disagree)</option>
 						<option>2</option>
 						<option>3</option>
@@ -114,7 +114,7 @@
 					<label for="question07">I enjoy playing video games.</label>
 					<br>
 					<div class="col-md-4">
-						<select class="form-control" id="question07" name="scores[6]">
+						<select class="form-control" id="question7" name="scores[6]">
 						<option>1 (Strongly Disagree)</option>
 						<option>2</option>
 						<option>3</option>
@@ -128,7 +128,7 @@
 					<label for="question08">I would rather read a book than watch a youtube video.</label>
 					<br>
 					<div class="col-md-4">
-						<select class="form-control" id="question08" name="scores[7]">
+						<select class="form-control" id="question8" name="scores[7]">
 						<option>1 (Strongly Disagree)</option>
 						<option>2</option>
 						<option>3</option>
@@ -142,7 +142,7 @@
 					<label for="question09">Family is important to me.</label>
 					<br>
 					<div class="col-md-4">
-						<select class="form-control" id="question09" name="scores[8]">
+						<select class="form-control" id="question9" name="scores[8]">
 						<option>1 (Strongly Disagree)</option>
 						<option>2</option>
 						<option>3</option>
@@ -171,7 +171,7 @@
 		<hr>
 		<a href="/api/friends">API Friends List</a> | <a href="https://github.com/ckontos/friendfinder" target="_blank">GitHub Repo</a>
 	</div>
-	<div id="newFriendModal" class="modal fade" role="dialog">
+	<div id="newFriendModal" class="modalfade" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -185,17 +185,16 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous">
+	</script>
 	<script type="text/javascript">
 		$('#submit').on("click", function() {
-			//console.log("submit_click");
-			// var data = [];
-
 			var userInput = {
 				name: $('#name').val().trim(),
 				photo: $('#photo').val().trim(),
-				scores: [$('#question01').val().trim(), $('#question02').val().trim(), $('#question03').val().trim(), $('#question04').val().trim(), $('#question05').val().trim(), $('#question06').val().trim(), $('#question07').val().trim(), $('#question08').val().trim(), $('#question09').val().trim(), $('#question10').val().trim()]
+				scores: [$('#question1').val().trim(), $('#question2').val().trim(), $('#question3').val().trim(), $('#question4').val().trim(), $('#question5').val().trim(), $('#question6').val().trim(), $('#question7').val().trim(), $('#question8').val().trim(), $('#question9').val().trim(), $('#question10').val().trim()]
 			};
 			//console.log(userInput);
 			var currentURL = window.location.origin;
