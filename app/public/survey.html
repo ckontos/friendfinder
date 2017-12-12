@@ -189,7 +189,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		$('#submit').on("click", function() {
-			console.log("submit_click");
+			//console.log("submit_click");
 			// var data = [];
 
 			var userInput = {
@@ -197,11 +197,11 @@
 				photo: $('#photo').val().trim(),
 				scores: [$('#question01').val().trim(), $('#question02').val().trim(), $('#question03').val().trim(), $('#question04').val().trim(), $('#question05').val().trim(), $('#question06').val().trim(), $('#question07').val().trim(), $('#question08').val().trim(), $('#question09').val().trim(), $('#question10').val().trim()]
 			};
-			console.log(userInput);
+			//console.log(userInput);
 			var currentURL = window.location.origin;
 			$.post(currentURL + '/api/friends', userInput, function(data) {
-				console.log("Post, call-back:");
-				console.log(data);
+				//console.log("Post, call-back:");
+				//console.log(data);
 				$("#bestFriendName").text(data.name);
 				$("#bestFriendImg").attr("src", data.photo);
 				$("#bestFriendModal").modal("show");
